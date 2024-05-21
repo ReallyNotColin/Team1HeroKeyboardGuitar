@@ -14,14 +14,9 @@ public class Score {
     /// <summary>
     /// Current streak, i.e. consecutive hit notes without a miss
     /// </summary>
-    public int Streak { get; private set; }
-
-    /// <summary>
-    /// initializes both amount and streak to 0
-    /// </summary>
+   
     public Score() {
         Amount = 0;
-        Streak = 0;
     }
 
     /// <summary>
@@ -39,18 +34,13 @@ public class Score {
     /// <param name="amount">Amount to add</param>
     public void Add(int amount) {
         Amount += amount;
-        Streak++;
     }
 
     /// <summary>
     /// Resets streak back to 0
     /// </summary>
-    public void Miss() {
-        Streak = 0;
-    }
-
+ 
     public void Deduct(int amount) {
         Amount = Math.Max(0, Amount - amount);
-        Miss();
     }
 }

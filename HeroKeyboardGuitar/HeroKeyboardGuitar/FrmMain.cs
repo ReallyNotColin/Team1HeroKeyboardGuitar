@@ -13,7 +13,6 @@ internal partial class FrmMain : Form {
     private const float noteSpeed = 0.5f;
     private Audio curSong;
     private Score score;
-    private DateTime lastSpacePress = DateTime.MinValue;
     public bool isSpacebarHeld = false;
     private bool isTap = false;
     private DateTime spacePressTime;
@@ -90,7 +89,7 @@ internal partial class FrmMain : Form {
                 note.Move(tmrPlay.Interval * (noteSpeed * 1.3));
                 if (note.CheckMiss(picTarget))
                 {
-                    score.Miss();
+                    score.Deduct(1);
                 }
             }
             else

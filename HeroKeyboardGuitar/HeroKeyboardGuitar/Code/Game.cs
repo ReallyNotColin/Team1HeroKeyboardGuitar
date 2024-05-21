@@ -44,10 +44,10 @@ public class Game {
     }
 
     /// <summary>
-    /// Retrieves the map of rewards for scores or streaks.
+    /// Retrieves the map of rewards for scores.
     /// Current not used
     /// </summary>
-    /// <returns>Map of rewards by score or streak</returns>
+    /// <returns>Map of rewards by score</returns>
     public static Dictionary<int, Action> GetRewardMap() {
         //return instance.CurSong.re
         return null;

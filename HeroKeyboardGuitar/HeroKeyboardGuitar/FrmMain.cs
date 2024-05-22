@@ -71,7 +71,7 @@ internal partial class FrmMain : Form {
         };
         // Add timer for brief pause at beginning 
         components.Add(tmrWaitThenPlay);
-        // 
+
         tmrWaitThenPlay.Tick += (e, sender) => {
             Game.GetInstance().CurSong.Play();
             tmrWaitThenPlay.Enabled = false;

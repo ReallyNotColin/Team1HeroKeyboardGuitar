@@ -34,9 +34,10 @@
             btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             btnStart.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnStart.ForeColor = System.Drawing.Color.Black;
-            btnStart.Location = new System.Drawing.Point(468, 377);
+            btnStart.Location = new System.Drawing.Point(535, 503);
+            btnStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnStart.Name = "btnStart";
-            btnStart.Size = new System.Drawing.Size(170, 90);
+            btnStart.Size = new System.Drawing.Size(194, 120);
             btnStart.TabIndex = 0;
             btnStart.Text = "Start";
             btnStart.UseVisualStyleBackColor = false;
@@ -44,15 +45,17 @@
             // 
             // FrmTitle
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.title;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            ClientSize = new System.Drawing.Size(1060, 565);
+            ClientSize = new System.Drawing.Size(1211, 753);
             Controls.Add(btnStart);
             DoubleBuffered = true;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "FrmTitle";
             Text = "Hero Keyboard Guitar";
+            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += FrmTitle_Load;
             ResumeLayout(false);
         }

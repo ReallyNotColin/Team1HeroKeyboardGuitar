@@ -37,7 +37,7 @@ public class Score {
     }
 
     /// <summary>
-    /// Resets streak back to 0
+    /// Deducts points when note is missed
     /// </summary>
  
     public void Deduct(int amount) {

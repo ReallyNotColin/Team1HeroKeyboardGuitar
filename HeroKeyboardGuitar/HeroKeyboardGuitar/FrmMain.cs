@@ -10,7 +10,7 @@ namespace HeroKeyboardGuitar;
 
 internal partial class FrmMain : Form {
     private List<Note> notes;
-    private const float noteSpeed = 0.5f;
+    private const float noteSpeed = 0.35f;
     private Audio curSong;
     private Score score;
     public bool isSpacebarHeld = false;

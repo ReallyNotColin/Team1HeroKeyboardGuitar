@@ -20,8 +20,8 @@ namespace HeroKeyboardGuitar {
         // COLIN: I might have to change the filepath to the images/songs to something similar to these Application Startup Lines
         private readonly string PICS_ROOT_PATH = $"{Application.StartupPath}../../../Resources/";
 
-        SoundPlayer sound = new SoundPlayer("game-start-6104.mp3");
-
+        SoundPlayer sound = new SoundPlayer();
+        SoundPlayer uiSound = new SoundPlayer();
 
         // Dictionary that stores <filepath, genre> 
         Dictionary<string, HeroKeyboardGuitar.GenreType> songs = new Dictionary<string, HeroKeyboardGuitar.GenreType>();
@@ -48,6 +48,10 @@ namespace HeroKeyboardGuitar {
                 if (soundName == "game")
                 {
                     sound = new SoundPlayer(filePath);
+                }
+                if (soundName == "This")
+                {
+                    uiSound = new SoundPlayer(filePath);
                 }
             }
             // Add music to combo boxes (AKA dropdown menus)
@@ -306,6 +310,7 @@ namespace HeroKeyboardGuitar {
                     button1.Text = "START " + comboBox1.SelectedItem + "!!!";
                 }
             }
+            uiSound.Play();
 
         }
 
@@ -332,6 +337,8 @@ namespace HeroKeyboardGuitar {
                     button2.Text = "START " + comboBox2.SelectedItem + "!!!";
                 }
             }
+            uiSound.Play();
+
 
         }
 
@@ -359,6 +366,8 @@ namespace HeroKeyboardGuitar {
                     button3.Text = "START " + comboBox3.SelectedItem + "!!!";
                 }
             }
+            uiSound.Play();
+
 
         }
 
@@ -377,6 +386,8 @@ namespace HeroKeyboardGuitar {
             Game.SetCurSong(songs.FirstOrDefault(x => x.Value == (HeroKeyboardGuitar.GenreType)comboBox2.SelectedItem).Key, (HeroKeyboardGuitar.GenreType)comboBox2.SelectedItem);
             FrmMain frmMain = new();
             frmMain.Show();
+            sound.Play();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -385,6 +396,8 @@ namespace HeroKeyboardGuitar {
             Game.SetCurSong(songs.FirstOrDefault(x => x.Value == (HeroKeyboardGuitar.GenreType)comboBox3.SelectedItem).Key, (HeroKeyboardGuitar.GenreType)comboBox3.SelectedItem);
             FrmMain frmMain = new();
             frmMain.Show();
+            sound.Play();
+
         }
 
         private void difficulty_SelectedIndexChanged(object sender, EventArgs e)

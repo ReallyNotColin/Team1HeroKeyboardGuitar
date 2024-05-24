@@ -184,4 +184,22 @@
   <data name="rnb - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rnb - Copy.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cherry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cherry.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cherry_Bad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cherry_Bad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cherry_Good" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cherry_Good.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Burn_World" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Burn_World.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="game_start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game_start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="This_One" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\This_One.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

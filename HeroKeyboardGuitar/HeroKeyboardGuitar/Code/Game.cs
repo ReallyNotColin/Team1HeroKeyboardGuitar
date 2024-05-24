@@ -10,6 +10,8 @@ namespace HeroKeyboardGuitar;
 /// Holds 
 /// </summary>
 public class Game {
+    public static float speed = 0.5f;
+
     private Dictionary<GenreType, Bitmap> bgMap;
 
     /// <summary>

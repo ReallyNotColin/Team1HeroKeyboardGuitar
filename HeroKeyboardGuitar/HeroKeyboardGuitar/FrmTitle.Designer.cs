@@ -25,6 +25,7 @@
         private void InitializeComponent()
         {
             btnStart = new System.Windows.Forms.Button();
+            open_instructions = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // btnStart
@@ -43,6 +44,21 @@
             btnStart.UseVisualStyleBackColor = false;
             btnStart.Click += btnStart_Click;
             // 
+            // open_instructions
+            // 
+            open_instructions.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            open_instructions.BackColor = System.Drawing.Color.FromArgb(192, 255, 255);
+            open_instructions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            open_instructions.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            open_instructions.Location = new System.Drawing.Point(493, 580);
+            open_instructions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            open_instructions.Name = "open_instructions";
+            open_instructions.Size = new System.Drawing.Size(250, 100);
+            open_instructions.TabIndex = 1;
+            open_instructions.Text = "Instructions";
+            open_instructions.UseVisualStyleBackColor = false;
+            open_instructions.Click += open_instructions_Click;
+            // 
             // FrmTitle
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -50,6 +66,7 @@
             BackgroundImage = Properties.Resources.title;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(1211, 753);
+            Controls.Add(open_instructions);
             Controls.Add(btnStart);
             DoubleBuffered = true;
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -63,5 +80,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button open_instructions;
     }
 }

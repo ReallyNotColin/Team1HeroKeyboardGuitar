@@ -123,4 +123,12 @@
   <metadata name="tmrScoreShrink.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>112, 17</value>
   </metadata>
+  <data name="label2.Text" xml:space="preserve">
+    <value>How to Play:
+1. Select a song and difficulty from the drop-down menu.
+2. Press 'F' to begin the game.
+3. Press 'Esc' to pause the game. 
+4. Time the space bar presses until the note reaches the green circle to make Dr. Cherry happy.
+5. Have fun!</value>
+  </data>
 </root>

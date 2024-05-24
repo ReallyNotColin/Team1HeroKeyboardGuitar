@@ -10,10 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MySql.Data" Version="8.4.0" />
     <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="NAudio.WinForms" Version="2.2.1" />
     <PackageReference Include="ScottPlot" Version="5.0.27" />
     <PackageReference Include="ScottPlot.WinForms" Version="5.0.27" />
+    <PackageReference Include="SSH.NET" Version="2024.0.0" />
+    <PackageReference Include="SshKeyGenerator" Version="1.1.51" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>
 

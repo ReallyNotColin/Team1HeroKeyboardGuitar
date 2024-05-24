@@ -34,7 +34,7 @@ internal static class ScoreTracker
      * if you have your sql server to accept all remote users change mysqlHost to 0.0.0.0
      * 
      */
-    private const string sshHost = "138.47.149.72";
+    private const string sshHost = "";
     private const string sshUsername = "";
     private const string sshPassword = "";
     private const int sshPort = 22;

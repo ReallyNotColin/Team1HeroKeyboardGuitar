@@ -93,39 +93,6 @@ namespace HeroKeyboardGuitar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< Updated upstream
-=======
-        internal static System.Drawing.Bitmap default_transparent_fotor_bg_remover_2024052404252 {
-            get {
-                object obj = ResourceManager.GetObject("default_transparent_fotor_bg_remover_2024052404252", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ezgif_1_453554342f {
-            get {
-                object obj = ResourceManager.GetObject("ezgif_1_453554342f", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mario {
-            get {
-                object obj = ResourceManager.GetObject("mario", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
->>>>>>> Stashed changes
         internal static System.Drawing.Bitmap marker {
             get {
                 object obj = ResourceManager.GetObject("marker", resourceCulture);

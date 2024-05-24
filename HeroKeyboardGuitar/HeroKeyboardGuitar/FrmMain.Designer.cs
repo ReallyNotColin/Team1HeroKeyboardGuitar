@@ -29,6 +29,11 @@
             lblScore = new System.Windows.Forms.Label();
             tmrScoreShrink = new System.Windows.Forms.Timer(components);
             panBg = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
+=======
+            button1 = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)picTarget).BeginInit();
             panBg.SuspendLayout();
             SuspendLayout();
@@ -70,12 +75,45 @@
             // panBg
             // 
             panBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< Updated upstream
+=======
+            panBg.Controls.Add(button1);
+            panBg.Controls.Add(label1);
+>>>>>>> Stashed changes
             panBg.Controls.Add(lblScore);
             panBg.Dock = System.Windows.Forms.DockStyle.Top;
             panBg.Location = new System.Drawing.Point(0, 0);
             panBg.Name = "panBg";
             panBg.Size = new System.Drawing.Size(1237, 480);
             panBg.TabIndex = 6;
+<<<<<<< Updated upstream
+=======
+            // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(502, 219);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(210, 64);
+            button1.TabIndex = 7;
+            button1.Text = "Return to Menu";
+            button1.UseVisualStyleBackColor = true;
+            button1.Visible = false;
+            button1.Click += button1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(585, 75);
+            label1.TabIndex = 6;
+            label1.Text = "Press 'F' to Begin!!!";
+>>>>>>> Stashed changes
             // 
             // FrmMain
             // 
@@ -93,10 +131,10 @@
             FormClosing += FrmMain_FormClosing;
             Load += FrmMain_Load;
             KeyDown += FrmMain_KeyDown;
-            KeyPress += FrmMain_KeyPress;
             KeyUp += FrmMain_KeyUp;
             ((System.ComponentModel.ISupportInitialize)picTarget).EndInit();
             panBg.ResumeLayout(false);
+            panBg.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -106,5 +144,10 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Timer tmrScoreShrink;
         private System.Windows.Forms.Panel panBg;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+>>>>>>> Stashed changes
     }
 }

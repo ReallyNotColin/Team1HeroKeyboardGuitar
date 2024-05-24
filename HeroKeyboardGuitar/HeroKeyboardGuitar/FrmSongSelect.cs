@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Security.Policy;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace HeroKeyboardGuitar {
         // COLIN: I might have to change the filepath to the images/songs to something similar to these Application Startup Lines
         private readonly string PICS_ROOT_PATH = $"{Application.StartupPath}../../../Resources/";
 
+        SoundPlayer sound = new SoundPlayer("game-start-6104.mp3");
 
 
         // Dictionary that stores <filepath, genre> 
@@ -37,6 +39,17 @@ namespace HeroKeyboardGuitar {
 
         private void FrmSongSelect_Load(object sender, EventArgs e)
         {
+            foreach (var soundfilepath in Directory.GetFiles(PICS_ROOT_PATH))
+            {
+                var song = Path.GetFileNameWithoutExtension(soundfilepath);
+                var soundName = song.Split('_')[0];
+                var filePath = soundfilepath;
+
+                if (soundName == "game")
+                {
+                    sound = new SoundPlayer(filePath);
+                }
+            }
             // Add music to combo boxes (AKA dropdown menus)
             foreach (var songFilePath in Directory.GetFiles(SONGS_ROOT_PATH))
             {
@@ -355,6 +368,7 @@ namespace HeroKeyboardGuitar {
             Game.SetCurSong(songs.FirstOrDefault(x => x.Value == (HeroKeyboardGuitar.GenreType)comboBox1.SelectedItem).Key, (HeroKeyboardGuitar.GenreType)comboBox1.SelectedItem);
             FrmMain frmMain = new();
             frmMain.Show();
+            sound.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)

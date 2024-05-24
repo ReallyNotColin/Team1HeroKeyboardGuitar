@@ -9,9 +9,8 @@ namespace AudioAnalyzing;
 public class Audio {
     private double[] samples;
     private WaveOutEvent outputDevice;
-    public WaveOutEvent OutputDevice => outputDevice;
     private string filePath;
-    public AudioFileReader fileReader;
+    private AudioFileReader fileReader;
     private List<double> clusters;
 
     /// <summary>

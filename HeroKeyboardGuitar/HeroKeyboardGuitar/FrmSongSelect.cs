@@ -8,7 +8,6 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Media;
 using System.Security.Policy;
 using System.Windows.Forms;
 
@@ -20,8 +19,7 @@ namespace HeroKeyboardGuitar {
         // COLIN: I might have to change the filepath to the images/songs to something similar to these Application Startup Lines
         private readonly string PICS_ROOT_PATH = $"{Application.StartupPath}../../../Resources/";
 
-        SoundPlayer sound = new SoundPlayer();
-        SoundPlayer uiSound = new SoundPlayer();
+
 
         // Dictionary that stores <filepath, genre> 
         Dictionary<string, HeroKeyboardGuitar.GenreType> songs = new Dictionary<string, HeroKeyboardGuitar.GenreType>();
@@ -33,27 +31,20 @@ namespace HeroKeyboardGuitar {
             comboBox1.Text = "--Select a Song--";
             comboBox2.Text = "--Select a Song--";
             comboBox3.Text = "--Select a Song--";
-            difficulty.Text = "Normal";
-
         }
 
+        private void FrmSongSelect_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
         private void FrmSongSelect_Load(object sender, EventArgs e)
         {
-            foreach (var soundfilepath in Directory.GetFiles(PICS_ROOT_PATH))
-            {
-                var song = Path.GetFileNameWithoutExtension(soundfilepath);
-                var soundName = song.Split('_')[0];
-                var filePath = soundfilepath;
+            
 
-                if (soundName == "game")
-                {
-                    sound = new SoundPlayer(filePath);
-                }
-                if (soundName == "This")
-                {
-                    uiSound = new SoundPlayer(filePath);
-                }
-            }
             // Add music to combo boxes (AKA dropdown menus)
             foreach (var songFilePath in Directory.GetFiles(SONGS_ROOT_PATH))
             {
@@ -86,9 +77,7 @@ namespace HeroKeyboardGuitar {
 
                 // Add <filepath,genre> to the dictionary called "songs" as a key:value pair 
                 songs.Add(filePath, genre);
-
             }
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -145,7 +134,7 @@ namespace HeroKeyboardGuitar {
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             // Load funny mario gif
-            pictureBox3.BackgroundImage = Properties.Resources.ezgif_1_453554342f;
+            pictureBox3.Image = Properties.Resources.ezgif_1_453554342f;
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
             // Make the combobox visible
             comboBox3.Visible = true;
@@ -210,7 +199,7 @@ namespace HeroKeyboardGuitar {
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
             // Image MonoChrome
-            //pictureBox3.Image = null;
+            pictureBox3.Image = null;
             pictureBox3.BackgroundImage = Properties.Resources.Picture6;
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
         }
@@ -219,14 +208,14 @@ namespace HeroKeyboardGuitar {
         {
             // Image Saturation
             pictureBox1.BackgroundImage = Properties.Resources.Picture2;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BackgroundImageLayout= ImageLayout.Stretch;
         }
 
         private void comboBox1_MouseHover(object sender, EventArgs e)
         {
             // Image Saturation (just in case)
             pictureBox1.BackgroundImage = Properties.Resources.Picture2;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1 .BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void comboBox1_MouseLeave(object sender, EventArgs e)
@@ -243,14 +232,14 @@ namespace HeroKeyboardGuitar {
         {
             // Image Saturation
             pictureBox2.BackgroundImage = Properties.Resources.Picture3;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;   
         }
 
         private void comboBox2_MouseEnter(object sender, EventArgs e)
         {
             // Image Saturation (Just in case)
             pictureBox2.BackgroundImage = Properties.Resources.Picture3;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2 .BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void comboBox2_MouseLeave(object sender, EventArgs e)
@@ -265,22 +254,19 @@ namespace HeroKeyboardGuitar {
         private void comboBox3_MouseEnter(object sender, EventArgs e)
         {
             // Image Saturation
-            pictureBox3.BackgroundImage = Properties.Resources.ezgif_1_453554342f;
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Image = Properties.Resources.ezgif_1_453554342f;
         }
 
         private void comboBox3_MouseHover(object sender, EventArgs e)
         {
             // Image Saturation
-            pictureBox3.BackgroundImage = Properties.Resources.ezgif_1_453554342f;
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Image = Properties.Resources.ezgif_1_453554342f;
         }
 
         private void comboBox3_MouseLeave(object sender, EventArgs e)
         {
             // Image MonoChrome 
-            pictureBox3.BackgroundImage = Properties.Resources.ezgif_1_453554342f;
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Image = Properties.Resources.ezgif_1_453554342f;
             // Remove ComboBox
             comboBox3.Visible = false;
 
@@ -310,7 +296,6 @@ namespace HeroKeyboardGuitar {
                     button1.Text = "START " + comboBox1.SelectedItem + "!!!";
                 }
             }
-            uiSound.Play();
 
         }
 
@@ -318,7 +303,7 @@ namespace HeroKeyboardGuitar {
         {
             // If ComboBox selection has happened...
             if (comboBox2.SelectedIndex != -1)
-            {
+            {   
                 // If button2 is invisible, make it visble 
                 if (!button2.Visible)
                 {
@@ -337,8 +322,6 @@ namespace HeroKeyboardGuitar {
                     button2.Text = "START " + comboBox2.SelectedItem + "!!!";
                 }
             }
-            uiSound.Play();
-
 
         }
 
@@ -366,8 +349,6 @@ namespace HeroKeyboardGuitar {
                     button3.Text = "START " + comboBox3.SelectedItem + "!!!";
                 }
             }
-            uiSound.Play();
-
 
         }
 
@@ -377,7 +358,6 @@ namespace HeroKeyboardGuitar {
             Game.SetCurSong(songs.FirstOrDefault(x => x.Value == (HeroKeyboardGuitar.GenreType)comboBox1.SelectedItem).Key, (HeroKeyboardGuitar.GenreType)comboBox1.SelectedItem);
             FrmMain frmMain = new();
             frmMain.Show();
-            sound.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -386,8 +366,6 @@ namespace HeroKeyboardGuitar {
             Game.SetCurSong(songs.FirstOrDefault(x => x.Value == (HeroKeyboardGuitar.GenreType)comboBox2.SelectedItem).Key, (HeroKeyboardGuitar.GenreType)comboBox2.SelectedItem);
             FrmMain frmMain = new();
             frmMain.Show();
-            sound.Play();
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -396,33 +374,8 @@ namespace HeroKeyboardGuitar {
             Game.SetCurSong(songs.FirstOrDefault(x => x.Value == (HeroKeyboardGuitar.GenreType)comboBox3.SelectedItem).Key, (HeroKeyboardGuitar.GenreType)comboBox3.SelectedItem);
             FrmMain frmMain = new();
             frmMain.Show();
-            sound.Play();
-
         }
 
-        private void difficulty_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Update Game.speed based on selected difficulty
-            switch (difficulty.SelectedIndex)
-            {
-                case 0: // Easy
-                    Game.speed = 0.3f;
-                    break;
-                case 1: // Normal
-                    Game.speed = 0.5f;
-                    break;
-                case 2: // Hard
-                    Game.speed = 0.8f;
-                    break;
-                default:
-                    break;
-
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

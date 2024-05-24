@@ -34,9 +34,6 @@
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
-            difficulty = new System.Windows.Forms.ComboBox();
-            label1 = new System.Windows.Forms.Label();
-            button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -47,11 +44,12 @@
             pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             pictureBox1.BackColor = System.Drawing.Color.White;
             pictureBox1.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            pictureBox1.Location = new System.Drawing.Point(12, 39);
+            pictureBox1.Location = new System.Drawing.Point(14, 16);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(329, 438);
+            pictureBox1.Size = new System.Drawing.Size(375, 619);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -63,11 +61,11 @@
             pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             pictureBox2.BackColor = System.Drawing.Color.Black;
             pictureBox2.BackgroundImage = Properties.Resources.Picture4;
-            pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            pictureBox2.Location = new System.Drawing.Point(364, 39);
+            pictureBox2.Location = new System.Drawing.Point(416, 16);
+            pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(329, 438);
+            pictureBox2.Size = new System.Drawing.Size(375, 619);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
@@ -81,9 +79,10 @@
             pictureBox3.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            pictureBox3.Location = new System.Drawing.Point(719, 39);
+            pictureBox3.Location = new System.Drawing.Point(822, 16);
+            pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new System.Drawing.Size(329, 438);
+            pictureBox3.Size = new System.Drawing.Size(375, 619);
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
@@ -93,7 +92,6 @@
             // comboBox1
             // 
             comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
-            comboBox1.BackColor = System.Drawing.SystemColors.Window;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new System.Drawing.Point(126, 395);
             comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -110,7 +108,8 @@
             // 
             comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new System.Drawing.Point(484, 296);
+            comboBox2.Location = new System.Drawing.Point(538, 395);
+            comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new System.Drawing.Size(138, 28);
             comboBox2.TabIndex = 5;
@@ -157,7 +156,8 @@
             button2.BackColor = System.Drawing.Color.Blue;
             button2.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             button2.ForeColor = System.Drawing.Color.White;
-            button2.Location = new System.Drawing.Point(448, 495);
+            button2.Location = new System.Drawing.Point(485, 660);
+            button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(207, 77);
             button2.TabIndex = 8;
@@ -182,51 +182,12 @@
             button3.Visible = false;
             button3.Click += button3_Click;
             // 
-            // difficulty
-            // 
-            difficulty.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            difficulty.FormattingEnabled = true;
-            difficulty.Items.AddRange(new object[] { "Easy", "Normal", "Hard" });
-            difficulty.Location = new System.Drawing.Point(424, 10);
-            difficulty.Name = "difficulty";
-            difficulty.Size = new System.Drawing.Size(205, 23);
-            difficulty.TabIndex = 10;
-            difficulty.SelectedIndexChanged += difficulty_SelectedIndexChanged;
-            // 
-            // label1
-            // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(322, 8);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(96, 25);
-            label1.TabIndex = 11;
-            label1.Text = "Difficulty: ";
-            // 
-            // button4
-            // 
-            button4.BackColor = System.Drawing.Color.White;
-            button4.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button4.ForeColor = System.Drawing.Color.Blue;
-            button4.Location = new System.Drawing.Point(12, 1);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(219, 38);
-            button4.TabIndex = 12;
-            button4.Text = "Return to Menu";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
             // FrmSongSelect
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Black;
-            ClientSize = new System.Drawing.Size(1060, 565);
-            Controls.Add(button4);
-            Controls.Add(label1);
-            Controls.Add(difficulty);
+            ClientSize = new System.Drawing.Size(1211, 753);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -241,11 +202,11 @@
             Text = "Select Song";
             WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += FrmSongSelect_Load;
+            KeyDown += FrmSongSelect_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -259,8 +220,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox difficulty;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
     }
 }
